@@ -16,9 +16,9 @@ Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "toybox"
   gem.homepage = "http://github.com/kmwhite/toybox"
-  gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.license = "BSD"
+  gem.summary = %Q{Debianize your rails app}
+  gem.description = %Q{Debianize your rails app, the Debian way}
   gem.email = "me@kmwhite.net"
   gem.authors = ["Kristofer M White"]
   # dependencies defined in Gemfile
