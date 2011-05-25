@@ -79,8 +79,8 @@ binary-arch: build install
 	dh_testdir
 	dh_testroot
 	dh_installdocs
-	dh_installinit -n --name=cnu-it 
-	dh_installinit -n --name=cnu-it-worker
+	dh_installinit -n --name=#{Toybox.config[:username]}
+	dh_installinit -n --name=#{Toybox.config[:username]}-worker
 	#  -u"start 2 3 . stop 11 1 ."
 	dh_installcron
 	dh_installman
@@ -90,7 +90,7 @@ binary-arch: build install
 	#dh_installdebconf
 	# dh_strip
 	# dh_fixperms
-	chown cnuit:cnuit -R $(FAKEROOT)/export/web/cnu_it
+	chown cnuit:cnuit -R $(FAKEROOT)/#{Toybox.config[:app_root]}
 	dh_compress
 	dh_installdeb
 	#dh_shlibdeps

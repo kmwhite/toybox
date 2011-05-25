@@ -17,7 +17,7 @@ module Toybox
       "$(SRC)/#{path.to_s}"
     end
     def install_dest
-        "#{APP_FAKEROOT}/#{path.to_s}"
+        "#{Toybox::app_fakeroot}/#{path.to_s}"
     end
     def debian_install_cmd
       [install_cmd, q(install_src), q(install_dest)].join(' ')

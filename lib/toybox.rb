@@ -9,12 +9,14 @@ module Toybox
 
   @@config_data = {}
 
-  APP_FAKEROOT =  "$(FAKEROOT)/#{@@config_data[:app_root]}"
-
   class ToyboxTask < Rails::Railtie
     rake_tasks do
       Dir[File.join(File.dirname(__FILE__),'tasks/*.rake')].each { |f| load f }
     end
+  end
+
+  def self.app_fakeroot
+    "$(FAKEROOT)/#{Toybox.config[:app_root]}"
   end
 
   def self.configure(config = nil, &block)
