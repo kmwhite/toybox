@@ -60,7 +60,7 @@ install-setup: debian/$(PKG).dirs
 	dh_testroot
 	dh_clean -k
 	mkdir  $(FAKEROOT) 
-	( cd $(FAKEROOT) ; cat ../$(PKG).dirs | tr '\n' '\0'| xargs -0 -Ix install -d -m 755 x)
+	( cd $(FAKEROOT) ; cat ../$(PKG).dirs | tr '\\n' '\\0'| xargs -0 -Ix install -d -m 755 x)
 	#dh_installdirs
 	#touch install-setup
 	
