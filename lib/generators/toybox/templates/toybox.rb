@@ -46,6 +46,12 @@ Toybox.configure do
     :ignore_dirs => [
       'vendor/bundle',
       'vendor/plugins'
-    ]
+    ],
+
+
+    # use_production_yamls: If enabled (true), then we will only include
+    # yamls that match the config/*_production.yml pattern in the package.
+    # If disabled, then we won't prune yaml files
+    :use_production_yamls => true
   }
 end
