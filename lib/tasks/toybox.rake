@@ -90,7 +90,7 @@ binary-arch: build install
 	#dh_installdebconf
 	# dh_strip
 	# dh_fixperms
-	chown cnuit:cnuit -R $(FAKEROOT)/#{Toybox.config[:app_root]}
+	chown #{Toybox.config[:username]}:#{Toybox.config[:group_name]} -R $(FAKEROOT)/#{Toybox.config[:app_root]}
 	dh_compress
 	dh_installdeb
 	#dh_shlibdeps
