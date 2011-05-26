@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{toybox}
-  s.version = "0.0.0"
+  s.version = "0.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Kristofer M White"]
-  s.date = %q{2011-05-12}
+  s.date = %q{2011-05-26}
   s.description = %q{Debianize your rails app, the Debian way}
   s.email = %q{me@kmwhite.net}
   s.extra_rdoc_files = [
@@ -24,9 +24,18 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "lib/generators/toybox.rb",
+    "lib/generators/toybox/install_generator.rb",
+    "lib/generators/toybox/templates/toybox.rb",
+    "lib/tasks/toybox.rake",
     "lib/toybox.rb",
+    "lib/toybox/configfile.rb",
+    "lib/toybox/exefile.rb",
+    "lib/toybox/linkfile.rb",
+    "lib/toybox/txtfile.rb",
     "test/helper.rb",
-    "test/test_toybox.rb"
+    "test/test_toybox.rb",
+    "toybox.gemspec"
   ]
   s.homepage = %q{http://github.com/kmwhite/toybox}
   s.licenses = ["BSD"]
