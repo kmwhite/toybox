@@ -1,6 +1,26 @@
 = toybox
 
-Description goes here.
+Toybox is a simple gem to help package Rails Applications as Debian Packages for easy distribution and scripted spin-ups of nodes.
+
+== Installation
+
+Simply add:
+        gem 'toybox'
+to your Gemfile
+
+== Usage
+
+=== Create the generator
+        rails generate toybox:config
+=== Edit the generated config
+        $EDITOR config/initializers/toybox.rb
+=== Initialize the application
+        rake toybox:init['foo','1.0']
+=== Edit the config
+        $EDITOR debian/control
+=== Debianize!
+        rake toybox:debianize
+
 
 == Contributing to toybox
  
